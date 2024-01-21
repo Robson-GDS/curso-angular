@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-template-binding',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './template-binding.component.html',
   styleUrl: './template-binding.component.scss'
 })
