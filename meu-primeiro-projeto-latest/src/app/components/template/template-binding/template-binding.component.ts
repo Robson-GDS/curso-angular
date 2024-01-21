@@ -15,7 +15,15 @@ export class TemplateBindingComponent {
   public isDisabled = false;
   public srcValue = 'https://sm.ign.com/t/ign_br/screenshot/default/os-cavaleiros-do-zodiaco-na-tv_ejjr.1280.jpg';
 
-  public sum(number1: number, number2: number) {
-    return number1 + number2;
+  public sum() {
+    return this.age++;
+  }
+
+  public sub() {
+    return this.age--;
+  }
+
+  public onMouseMove(event: MouseEvent) {
+    return console.log(event);
   }
 }

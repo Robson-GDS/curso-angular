@@ -1,8 +1,20 @@
 <h2>Template</h2>
 <h3>Text Interpolations</h3>
-<p>{{ name }} - {{ age }} - {{ sum(1, 1) }}</p>
+<p>{{ name }} - {{ age }}</p>
 <p>{{ condition }}</p>
 
 <hr/>
 <button [disabled]="isDisabled">Button</button> <br /> <br />
 <img [src]="srcValue" >
+
+<hr />
+
+<h1>Evente binding</h1>
+
+<button (click)="sum()">+</button>
+<button (click)="sub()">-</button>
+
+<div
+  style="background: red; width: 300px; height: 300px; margin-top: 10px;"
+  (mousemove)="onMouseMove($event)"
+></div>
