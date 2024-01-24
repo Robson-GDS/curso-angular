@@ -1,0 +1,12 @@
+<h2 #trigger>Deferrable Views</h2>
+<button (click)="isTrue = true">Add true</button>
+
+@defer (when loadingData$ | async) {
+  <app-new-component />
+} @placeholder {
+  <p>Monstrar antes de carregar algo</p>
+} @loading {
+  <p>Loading...</p>
+} @error {
+  <p>Loading failed</p>
+}

@@ -1,4 +1,26 @@
 <h2>Control flow</h2>
-<h3>IF</h3>
+<h3>IF, FOR, SWITCH CASE</h3>
+
+@if(loadingData$ | async; as data) {
+  <ul>
+    @for(item of data; track item) {
+      <li>{{item}}</li>
+    }
+  </ul>
+} @else {
+  <p>Carregando...</p>
+}
 
 @if (isTrue) { Sim 1 eh === 1} @else { nao esta correto }
+
+@switch (switchCondition) {
+  @case('A') {
+    <p>Sim sua letra eh: A</p>
+  }
+  @case('B') {
+    <p>Sim sua letra eh: B</p>
+  }
+  @default {
+    <p>Os dados nao foram encontrados</p>
+  }
+}
